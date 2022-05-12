@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+.slider {
+    width: 1100px;
+    height: 800px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    background-color: #4e4e4e;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+input[name="radio-slider"] {
+    display: none;
+    /*visibility: hidden;*/
+}
+
+.slides {
+    width: 400%;
+    height: 90%;
+    display: flex;
+}
+
+.slide {
+    width: 25%;
+    transition: all 0.6s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.title-and-dots {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.titles-container {
+    width: 400px;
+    overflow: hidden;
+}
+
+.titles {
+    width: 400%;
+    display: flex;
+    gap: 10px;
+}
+
+.title {
+    width: 25%;
+    color: #fff;
+    font-size: 28px;
+    transition: all 0.6s ease;
+}
+
+.pagination {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: #6ea3ca;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot:hover {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+
+
+#slide-1:checked ~ .slides > .slide-1 {
+    margin-left: 0;
+}
+
+#slide-2:checked ~ .slides > .slide-1 {
+    margin-left: -25%;
+}
+
+#slide-3:checked ~ .slides > .slide-1 {
+    margin-left: -50%;
+}
+
+#slide-4:checked ~ .slides > .slide-1 {
+    margin-left: -75%;
+}
+
+
+#slide-1:checked ~ .title-and-dots > .titles-container > .titles > .title-1 {
+    margin-left: 0;
+}
+
+#slide-2:checked ~ .title-and-dots > .titles-container > .titles > .title-1 {
+    margin-left: -25%;
+}
+
+#slide-3:checked ~ .title-and-dots > .titles-container > .titles > .title-1 {
+    margin-left: -50%;
+}
+
+#slide-4:checked ~ .title-and-dots > .titles-container > .titles > .title-1 {
+    margin-left: -75%;
+}
+
+
+#slide-1:checked ~ .title-and-dots > .pagination > .dot-1 {
+    background: none;
+    border: 3px solid #6ea3ca;
+}
+
+#slide-1:checked ~ .title-and-dots > .pagination > .dot-1:hover {
+    border: 3px solid #fff;
+}
+
+#slide-2:checked ~ .title-and-dots > .pagination > .dot-2 {
+    background: none;
+    border: 3px solid #6ea3ca;
+}
+
+#slide-2:checked ~ .title-and-dots > .pagination > .dot-2:hover {
+    border: 3px solid #fff;
+}
+
+#slide-3:checked ~ .title-and-dots > .pagination > .dot-3 {
+    background: none;
+    border: 3px solid #6ea3ca;
+}
+
+#slide-3:checked ~ .title-and-dots > .pagination > .dot-3:hover {
+    border: 3px solid #fff;
+}
+
+#slide-4:checked ~ .title-and-dots > .pagination > .dot-4 {
+    background: none;
+    border: 3px solid #6ea3ca;
+}
+
+#slide-4:checked ~ .title-and-dots > .pagination > .dot-4:hover {
+    border: 3px solid #fff;
+}
+
+
+
+
+
+
+/*body {*/
+/*    font-size: 16px;*/
+/*    background-color: #25282a;*/
+/*}*/
+
+/*.slider {*/
+/*    !*border: 1px solid red;*!*/
+/*    width: 68.75rem;*/
+/*    height: 50rem;*/
+/*    overflow: hidden;*/
+/*    margin: 50px auto;*/
+/*    border: 3px solid #fff;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*input[name='radio-dot'] {*/
+/*    display: none;*/
+/*    !*visibility: hidden;*!*/
+/*}*/
+
+/*.slides {*/
+/*    width: 400%;*/
+/*    height: 90%;*/
+/*    display: flex;*/
+/*    transition: all 0.6s ease;*/
+/*}*/
+
+/*.slide {*/
+/*    width: 25%;*/
+/*    transition: all 0.6s ease;*/
+/*}*/
+
+/*.slide img {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
+
+/*.pagination {*/
+/*    display: flex;*/
+/*    gap: 10px;*/
+/*    width: 150px;*/
+/*    margin: 20px 10px auto auto;*/
+/*}*/
+
+/*.bar {*/
+/*    height: 25px;*/
+/*    width: 25px;*/
+/*    border-radius: 50%;*/
+/*    background-color: blue;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.bar:hover {*/
+/*    background-color: #fff;*/
+/*}*/
+
+/*#dot-1:checked ~ .pagination > .bar-1 {*/
+/*    !*width: 100px;*!*/
+/*    background: none;*/
+/*    border: 3px solid blue;*/
+/*}*/
+
+/*#dot-1:checked ~ .slides > .slide-1 {*/
+/*    margin-left: 0;*/
+/*}*/
+
+/*#dot-2:checked ~ .slides > .slide-1 {*/
+/*    margin-left: -25%;*/
+/*}*/
+
+/*#dot-3:checked ~ .slides > .slide-1 {*/
+/*    margin-left: -50%;*/
+/*}*/
+
+/*#dot-4:checked ~ .slides > .slide-1 {*/
+/*    margin-left: -75%;*/
+/*}*/
+
