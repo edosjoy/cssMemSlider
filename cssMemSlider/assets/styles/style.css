@@ -179,7 +179,7 @@ input[name="radio-slider"] {
     }
 
     .title-and-dots {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 1em;
     }
 
