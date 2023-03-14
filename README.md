@@ -1,6 +1,6 @@
 # CSS Mem Slider (без JS и фреймворков)
 
-Слайдер: https://edosjoy.github.io/cssMemSlider/cssMemSlider/
+Deploy: https://edosjoy.github.io/cssMemSlider/cssMemSlider/
 
 Одно из учебных заданий.
 
