@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    background-color: #4e4e4e;
+}
+
+.slider {
+    max-width: 50em;
+    height: 37.5em;
+    border: 0.188rem solid #fff;
+    border-radius: 0.625rem;
+    background-color: #4e4e4e;
+    margin: 3.125rem auto;
+    overflow: hidden;
+}
+
+input[name="radio-slider"] {
+    display: none;
+}
+
+.slides {
+    width: 400%;
+    height: 90%;
+    display: flex;
+}
+
+.slide {
+    width: 25%;
+    transition: all 0.6s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.title-and-dots {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem;
+}
+
+.titles-container {
+    width: 20rem;
+    overflow: hidden;
+}
+
+.titles {
+    width: 400%;
+    display: flex;
+}
+
+.title {
+    width: 25%;
+    color: #fff;
+    font-size: 1.5em;
+    transition: all 0.6s ease;
+}
+
+.pagination {
+    display: flex;
+    gap: 0.625rem;
+}
+
+.page {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.page:hover .dot {
+    background-color: #fff;
+}
+
+.dot {
+    width: 1.25em;
+    height: 1.25em;
+    background-color: #6ea3ca;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot:hover {
+    background-color: #fff;
+}
+
+#slide-1:checked ~ .slides > .slide-1 {
+    margin-left: 0;
+}
+
+#slide-2:checked ~ .slides > .slide-1 {
+    margin-left: -25%;
+}
+
+#slide-3:checked ~ .slides > .slide-1 {
+    margin-left: -50%;
+}
+
+#slide-4:checked ~ .slides > .slide-1 {
+    margin-left: -75%;
+}
+
+#slide-1:checked ~ .title-and-dots > .titles-container > .titles > .title-1 {
+    margin-left: 0;
+}
+
+#slide-2:checked ~ .title-and-dots > .titles-container > .titles > .title-1 {
+    margin-left: -25%;
+}
+
+#slide-3:checked ~ .title-and-dots > .titles-container > .titles > .title-1 {
+    margin-left: -50%;
+}
+
+#slide-4:checked ~ .title-and-dots > .titles-container > .titles > .title-1 {
+    margin-left: -75%;
+}
+
+#slide-1:checked ~ .title-and-dots > .pagination > .page-1 > .dot {
+    background: none;
+    border: 3px solid #6ea3ca;
+}
+
+#slide-1:checked ~ .title-and-dots > .pagination > .page-1:hover > .dot {
+    border: 3px solid #fff;
+}
+
+#slide-2:checked ~ .title-and-dots > .pagination > .page-2 > .dot {
+    background: none;
+    border: 3px solid #6ea3ca;
+}
+
+#slide-2:checked ~ .title-and-dots > .pagination > .page-2:hover > .dot {
+    border: 3px solid #fff;
+}
+
+#slide-3:checked ~ .title-and-dots > .pagination > .page-3 > .dot {
+    background: none;
+    border: 3px solid #6ea3ca;
+}
+
+#slide-3:checked ~ .title-and-dots > .pagination > .page-3:hover > .dot {
+    border: 3px solid #fff;
+}
+
+#slide-4:checked ~ .title-and-dots > .pagination > .page-4 > .dot {
+    background: none;
+    border: 3px solid #6ea3ca;
+}
+
+#slide-4:checked ~ .title-and-dots > .pagination > .page-4:hover > .dot {
+    border: 3px solid #fff;
+}
+
+@media screen and (max-width: 699px) {
+    body {
+        font-size: 10px;
+    }
+
+    .slider {
+        max-width: 48em;
+    }
+
+    .slides {
+        height: 80%;
+    }
+
+    .title-and-dots {
+        flex-direction: column-reverse;
+        gap: 1em;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    #slide-1:checked ~ .title-and-dots > .pagination > .page-1 > .dot {
+        border: 3px solid #fff;
+    }
+
+    #slide-2:checked ~ .title-and-dots > .pagination > .page-2 > .dot {
+        border: 3px solid #fff;
+    }
+
+    #slide-3:checked ~ .title-and-dots > .pagination > .page-3 > .dot {
+        border: 3px solid #fff;
+    }
+
+    #slide-4:checked ~ .title-and-dots > .pagination > .page-4 > .dot {
+        border: 3px solid #fff;
+    }
+}
